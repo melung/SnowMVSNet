@@ -48,7 +48,7 @@ bash ./scripts/train_dtu.sh exp_name
     ├── all_list.txt
     ├── training_list.txt
     └── validation_list.txt                    
-
+'''
 
 Train SnowMVSNet with BlendedMVS dataset: 
 ```
@@ -89,6 +89,21 @@ bash ./scripts/test_tnt.sh exp_name
 ```
 bash scripts/fusion_tnt.sh
 ```
+
+##    MVHuman dataset
+
+* Download [MVHuman dataset](TBD) and unzip it.
+
+* Test:
+```
+bash ./scripts/test_mdi.sh exp_name
+```
+
+* Pointcloud Fusion:
+```
+TBD
+```
+
 
 ## Citation
 ```
