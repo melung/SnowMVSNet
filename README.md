@@ -1,19 +1,23 @@
-# SnowMVSNet
-SnowMVSNet: Visibility-Aware Multi-View Stereo by Surface Normal Weighting for Occlusion Robustness.
-#  [arXiv]()
+<h1 align="center">SnowMVSNet: Visibility-Aware Multi-View Stereo by Surface Normal Weighting for Occlusion Robustness.</h1>
 
-# This repository contains the official implementation of the paper: "Visibility-Aware Multi-View Stereo by Surface Normal Weighting for Occlusion Robustness".
+<div align="center">
+    <a href="https://github.com/melung" target='_blank'>Hyuksang Lee</a>, 
+    <a href="" target='_blank'>Seongmin Lee</a>, 
+    <a href="" target='_blank'>Sanghoon Lee</a>, 
+</div>
 
-## Installation
-SnowMVSNet is tested on:
-* python 3.9
-* CUDA 11.4
-### Requirements
+<br />
+
+## Setup
 ```
+conda create -n snowmvs python=3.9
+conda activate snowmvs
 pip install -r requirements.txt
 ```
 
 ## Training
+
+## DTU
 * Dowload [DTU dataset](https://roboimagedata.compute.dtu.dk/). For convenience, can download the preprocessed [DTU training data](https://drive.google.com/file/d/1eDjh-_bxKKnEuz5h-HXS7EDJn59clx6V/view)
  and [Depths_raw](https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/cascade-stereo/CasMVSNet/dtu_data/dtu_train_hr/Depths_raw.zip) 
  (both from [Original MVSNet](https://github.com/YoYo000/MVSNet)), and upzip it as the $DTU_TRAINING folder. For training and testing with raw image size, you can download [Rectified_raw](http://roboimagedata2.compute.dtu.dk/data/MVS/Rectified.zip), and unzip it.
@@ -27,7 +31,7 @@ pip install -r requirements.txt
 ```
 In ``scripts/train_dtu.sh``, set ``DTU_TRAINING`` as $DTU_TRAINING
 
-Train SnowMVSNet (Multi-GPU training): 
+Train SnowMVSNet: 
 ```
 bash ./scripts/train_dtu.sh exp_name
 ```
@@ -36,43 +40,26 @@ After training, you will get model checkpoints in ./checkpoints/dtu/exp_name.
 ## Testing
 * Download the preprocessed test data [DTU testing data](https://drive.google.com/open?id=135oKPefcPTsdtLRzoDAQtPpHuoIrpRI_) (from [Original MVSNet](https://github.com/YoYo000/MVSNet)) and unzip it as the $DTU_TESTPATH folder, which should contain one ``cams`` folder, one ``images`` folder and one ``pair.txt`` file.
 * In ``scripts/test_dtu.sh``, set ``DTU_TESTPATH`` as $DTU_TESTPATH.
-* The ``DTU_CKPT_FILE`` is automatically set as your pretrained checkpoint file, you also can download my [pretrained model](will be soon).
-* Test with middle size:
+* You can use my [pretrained model](https://drive.google.com/file/d/1bIgGtPT_aSCm_-DEExfQ1-ngoR1chyOI/view?usp=drive_link).
+
+* Test:
 ```
-bash ./scripts/test_dtu.sh mid exp_name
-```
-* Test with raw size:
-```
-bash ./scripts/test_dtu.sh raw exp_name
+bash ./scripts/test_dtu.sh exp_name
 ```
 * Test with provided pretrained model:
 ```
 bash scripts/test_dtu.sh pretrained --loadckpt PATH_TO_CKPT_FILE
 ```
-After testing, you will get reconstructed point clouds of DTU test set in ./outputs/dtu/exp_name.
 
-## Metric
-* For quantitative evaluation, download [SampleSet](http://roboimagedata.compute.dtu.dk/?page_id=36) and [Points](http://roboimagedata.compute.dtu.dk/?page_id=36) from DTU's website. Unzip them and place `Points` folder in `SampleSet/MVS Data/`. The structure looks like:
-```
-SampleSet
-├──MVS Data
-      └──Points
+## Citation
 ```
 
 
-* You can also evaluate the metrics with the traditional steps:
-In ``evaluations/dtu/BaseEvalMain_web.m``, set `dataPath` as the path to `SampleSet/MVS Data/`, `plyPath` as directory that stores the reconstructed point clouds and `resultsPath` as directory to store the evaluation results. Then run ``evaluations/dtu/BaseEvalMain_web.m`` in matlab.
 
-
-If you find this project useful for your research, please cite: 
-```
-
-
-}
 ```
 
 
 ## Acknowledgements
-Our work is partially baed on these opening source work: [MVSNet](https://github.com/YoYo000/MVSNet), [MVSNet-pytorch](https://github.com/xy-guo/MVSNet_pytorch), [cascade-stereo](https://github.com/alibaba/cascade-stereo), [PatchmatchNet](https://github.com/FangjinhuaWang/PatchmatchNet), [MVSTER](https://github.com/JeffWang987/MVSTER), [GeoMvset](https://github.com/doubleZ0108/GeoMVSNet).
+Our work is partially baed on these opening source work: [MVSTER](https://github.com/JeffWang987/MVSTER), [GeoMvset](https://github.com/doubleZ0108/GeoMVSNet).
 
 We appreciate their contributions to the MVS community.
