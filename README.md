@@ -48,7 +48,7 @@ bash ./scripts/train_dtu.sh exp_name
     ├── all_list.txt
     ├── training_list.txt
     └── validation_list.txt                    
-'''
+``` 
 
 Train SnowMVSNet with BlendedMVS dataset: 
 ```
