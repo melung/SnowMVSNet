@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Training
 
-##    DTU
+###    DTU
 * Download [DTU dataset](https://roboimagedata.compute.dtu.dk/) or [DTU training data](https://drive.google.com/file/d/1eDjh-_bxKKnEuz5h-HXS7EDJn59clx6V/view)
  and [Depths_raw](https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/cascade-stereo/CasMVSNet/dtu_data/dtu_train_hr/Depths_raw.zip) 
  (preprocessed by [MVSNet](https://github.com/YoYo000/MVSNet)), and upzip it like bellow. If you want to train with raw image size, you can download [Rectified_raw](http://roboimagedata2.compute.dtu.dk/data/MVS/Rectified.zip), and unzip it.
@@ -35,7 +35,7 @@ Train SnowMVSNet with DTU dataset:
 bash ./scripts/train_dtu.sh exp_name
 ```
 
-##    BlendedMVS
+###    BlendedMVS
 * Download [low-res set](https://drive.google.com/file/d/1ilxls-VJNvJnB7IaFj7P0ehMPr7ikRCb/view) from [BlendedMVS](https://github.com/YoYo000/BlendedMVS) and unzip it like below:.
 
 ```                
@@ -57,7 +57,7 @@ bash ./scripts/train_blend.sh exp_name
 
 
 ## Testing
-##    DTU
+###    DTU
 
 * Download [DTU testing data](https://drive.google.com/open?id=135oKPefcPTsdtLRzoDAQtPpHuoIrpRI_) (preprocessed by [MVSNet](https://github.com/YoYo000/MVSNet)) and unzip it.
 * You can use my [pretrained model](https://drive.google.com/file/d/1bIgGtPT_aSCm_-DEExfQ1-ngoR1chyOI/view?usp=drive_link).
@@ -76,7 +76,7 @@ bash scripts/test_dtu.sh pretrained --loadckpt PATH_TO_CKPT_FILE
 bash scripts/fusion_dtu.sh
 ```
 
-##    Tanks and Temples
+###    Tanks and Temples
 
 * Download [tank and temples data](https://drive.google.com/file/d/1YArOJaX9WVLJh4757uE8AEREYkgszrCo/view) and unzip it.
 
@@ -90,9 +90,9 @@ bash ./scripts/test_tnt.sh exp_name
 bash scripts/fusion_tnt.sh
 ```
 
-##    MVHuman dataset
+###    MVHuman dataset
 
-* Download [MVHuman dataset](TBD) and unzip it.
+* Download [MVHuman dataset](TBD) (Coming soon) and unzip it.
 
 * Test:
 ```
