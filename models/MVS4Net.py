@@ -274,7 +274,7 @@ def MVS4net_loss(depth_values, inputs, depth_gt_ms, mask_ms, **kwargs):
         stage_ot_loss.append(pw_loss)
         stage_normal_loss.append(this_stage_normal_loss)
 
-        total_loss = total_loss + stage_lw[stage_idx] * (( pw_loss) + 0.5*this_stage_normal_loss)
+        total_loss = total_loss + stage_lw[stage_idx] * (( pw_loss) + 1.0*this_stage_normal_loss)
             
     return total_loss, stage_l1_loss, stage_ot_loss, range_err_ratio, stage_normal_loss
 
