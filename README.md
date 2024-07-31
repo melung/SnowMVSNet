@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 Train SnowMVSNet with DTU dataset: 
 ```
-bash ./scripts/train_dtu.sh exp_name
+bash ./scripts/train_dtu.sh exp_name #TBD
 ```
 
 ###    BlendedMVS
@@ -52,7 +52,7 @@ bash ./scripts/train_dtu.sh exp_name
 
 Train SnowMVSNet with BlendedMVS dataset: 
 ```
-bash ./scripts/train_blend.sh exp_name
+bash ./scripts/train_blend.sh exp_name #TBD
 ```
 
 
