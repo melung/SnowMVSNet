@@ -8,6 +8,10 @@
 
 <br />
 
+## Overview
+<img src="asset/overview.png" style="max-width: 60%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
+
+
 ## Setup
 ```
 conda create -n snowmvs python=3.9
