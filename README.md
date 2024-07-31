@@ -2,7 +2,7 @@
 
 <div align="center">
     <a href="https://github.com/melung" target='_blank'>Hyuksang Lee</a>1, 
-    <a href="" target='_blank'>Seongmin Lee</a>1, 
+    <a href="https://scholar.google.co.kr/citations?user=wxAl42AAAAAJ&hl=ko&oi=ao" target='_blank'>Seongmin Lee</a>1, 
     <a href="http://insight.yonsei.ac.kr/gnuboard/bbs/content.php?co_id=member_prof" target='_blank'>Sanghoon Lee</a>, 
 </div>
 
@@ -90,19 +90,10 @@ bash ./scripts/test_tnt.sh exp_name
 bash scripts/fusion_tnt.sh
 ```
 
-###    MVHuman dataset
+###    MVHuman Result dataset
 
-* Download [MVHuman dataset](TBD) (Coming soon) and unzip it.
+* Download [MVHuman dataset](TBD) (Coming soon) and unzip it. We provide 5subject 10 different pose multiview human SnowMVSNet result data  images, depths,normals, mesh
 
-* Test:
-```
-bash ./scripts/test_mdi.sh exp_name
-```
-
-* Pointcloud Fusion:
-```
-TBD
-```
 
 
 ## Citation
