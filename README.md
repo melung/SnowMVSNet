@@ -97,7 +97,7 @@ bash scripts/fusion_tnt.sh
 ###    MVHuman Result dataset
 <img src="asset/mvhuman.png" style="max-width: 60%; height: auto; display: block; margin-left: auto; margin-right: auto;" />
 
-* Download [MVHuman dataset](TBD) (available soon) from the provided link. We offer multiview human data from SnowMVSNet, including images, depths, normals, and meshes for 5 subjects across 10 different poses.
+* Download [MVHuman dataset](http://insight.yonsei.ac.kr/gnuboard/bbs/content.php?co_id=download_mvhuman) from the provided link. We offer multiview human data from SnowMVSNet, including images, depths, normals, camera matrix and meshes for 5 subjects across 10 different poses.
 
 
 
