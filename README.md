@@ -103,9 +103,13 @@ bash scripts/fusion_tnt.sh
 
 ## Citation
 ```
-
-
-
+@article{lee2025visibility,
+  title={Visibility-Aware Multi-View Stereo by Surface Normal Weighting for Occlusion Robustness},
+  author={Lee, Hyucksang and Lee, Seongmin and Lee, Sanghoon},
+  journal={IEEE transactions on pattern analysis and machine intelligence},
+  year={2025},
+  publisher={IEEE}
+}
 ```
 
 
