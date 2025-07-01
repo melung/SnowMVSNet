@@ -64,13 +64,13 @@ bash ./scripts/train_blend.sh exp_name #TBD
 ###    DTU
 
 * Download [DTU testing data](https://drive.google.com/open?id=135oKPefcPTsdtLRzoDAQtPpHuoIrpRI_) (preprocessed by [MVSNet](https://github.com/YoYo000/MVSNet)) and unzip it.
-* You can use my [pretrained model](https://drive.google.com/file/d/1bIgGtPT_aSCm_-DEExfQ1-ngoR1chyOI/view?usp=drive_link).
+* You can use my [pretrained model](https://drive.google.com/file/d/1coX-HjAWgpHiAKEPsGczmi5JWnqI__Id/view?usp=sharing).
 
 * Test:
 ```
 bash ./scripts/test_dtu.sh exp_name
 ```
-* Test with provided pretrained model:
+* Test with provided pretrained model: 
 ```
 bash scripts/test_dtu.sh pretrained --loadckpt PATH_TO_CKPT_FILE
 ```
